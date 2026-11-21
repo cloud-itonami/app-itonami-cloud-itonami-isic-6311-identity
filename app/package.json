@@ -1,0 +1,21 @@
+{
+  "name": "@itonami/isic6311identity",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "itonami": {
+    "id": "network.itonami.isic6311identity",
+    "title": "Identity as a service (passkey-first, DID-native, immediately revocable)",
+    "source": "cloud-itonami-isic-6311-identity"
+  },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "test": "npm run build && node --test test/*.test.mjs",
+    "tauri": "tauri",
+    "build:desktop": "npm run build && tauri build --no-bundle",
+    "build:android": "sh scripts/android-apk.sh"
+  },
+  "devDependencies": {
+    "@tauri-apps/cli": "3.0.0-alpha.6"
+  }
+}
